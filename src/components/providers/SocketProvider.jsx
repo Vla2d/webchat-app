@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import socketContext from '../../contexts/socketContext.jsx';
+import { socketContext } from '../../contexts/index.js';
 
 const promisify = (socketFunction) => (...args) => new Promise((resolve, reject) => {
   const pendingTime = 3000;

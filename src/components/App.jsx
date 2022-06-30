@@ -11,8 +11,8 @@ import {
   NotFound, Login, Main, SignUp,
 } from './pages/index.js';
 import Modal from './modals/Modal.jsx';
-import { AuthProvider } from './providers/index.js';
-import authContext from '../contexts/authContext.jsx';
+import { AuthProvider, ThemeProvider } from './providers/index.js';
+import { authContext } from '../contexts/index.js';
 import {
   logInPagePath, signUpPagePath, notFoundPagePath, chatPagePath,
 } from '../routes.js';
@@ -26,17 +26,19 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <NotificationsContainer />
-        <Modal />
-        <Container>
-          <Header />
-          <Routes>
-            <Route path={chatPagePath()} element={<ChatRoute />} />
-            <Route path={logInPagePath()} element={<Login />} />
-            <Route path={signUpPagePath()} element={<SignUp />} />
-            <Route path={notFoundPagePath()} element={<NotFound />} />
-          </Routes>
-        </Container>
+        <ThemeProvider>
+          <Container>
+            <NotificationsContainer />
+            <Modal />
+            <Header />
+            <Routes>
+              <Route path={chatPagePath()} element={<ChatRoute />} />
+              <Route path={logInPagePath()} element={<Login />} />
+              <Route path={signUpPagePath()} element={<SignUp />} />
+              <Route path={notFoundPagePath()} element={<NotFound />} />
+            </Routes>
+          </Container>
+        </ThemeProvider>
       </BrowserRouter>
     </AuthProvider>
   );

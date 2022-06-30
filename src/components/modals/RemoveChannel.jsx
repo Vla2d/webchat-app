@@ -6,7 +6,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import socketContext from '../../contexts/socketContext.jsx';
+import { socketContext } from '../../contexts/index.js';
 import { actions } from '../../slices/index.js';
 import { getChannelWithActionId } from './selectors.js';
 

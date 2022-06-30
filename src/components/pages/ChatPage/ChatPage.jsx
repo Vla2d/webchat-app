@@ -6,12 +6,16 @@ import { toast } from 'react-toastify';
 import ChannelsSidebar from './ChannelsSidebar.jsx';
 import MessagesBlock from './MessagesBlock.jsx';
 import { actions } from '../../../slices/index.js';
-import authContext from '../../../contexts/authContext.jsx';
+import { authContext } from '../../../contexts/index.js';
 import { usersPath } from '../../../routes.js';
 
 const { getData } = actions;
 
 function MainPage() {
+  const one = []
+  const two = []
+  console.log(one == two)
+  console.log(one === two)
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const auth = useContext(authContext);
@@ -20,7 +24,7 @@ function MainPage() {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(usersPath(), { headers });
-
+      // fix bug with the empty page when initialising
       dispatch(getData(data));
     };
 

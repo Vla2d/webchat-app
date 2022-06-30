@@ -8,8 +8,7 @@ import * as filter from 'leo-profanity';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'react-toastify';
-import authContext from '../../../contexts/authContext.jsx';
-import socketContext from '../../../contexts/socketContext.jsx';
+import { authContext, socketContext } from '../../../contexts/index.js';
 import { getCurrentChannelId } from './selectors.js';
 
 function MessageSubmitForm() {

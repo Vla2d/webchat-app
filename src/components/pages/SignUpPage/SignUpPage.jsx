@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { signUpPath, chatPagePath } from '../../../routes.js';
-import authContext from '../../../contexts/authContext.jsx';
+import { authContext } from '../../../contexts/index.js';
 import signUpLogo from './signup.png';
 
 function SignUp() {

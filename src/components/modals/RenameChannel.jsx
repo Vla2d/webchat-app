@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import * as yup from 'yup';
 import { toast } from 'react-toastify';
-import socketContext from '../../contexts/socketContext.jsx';
+import { socketContext } from '../../contexts/index.js';
 import { getChannelsNames, getPreviousChannelName, getChannelWithActionId } from './selectors.js';
 
 function RenameChannel({ handleClose }) {

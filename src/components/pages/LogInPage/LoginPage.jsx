@@ -8,7 +8,7 @@ import * as yup from 'yup';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'react-toastify';
-import authContext from '../../../contexts/authContext.jsx';
+import { authContext } from '../../../contexts/index.js';
 import { loginPath, chatPagePath, signUpPagePath } from '../../../routes.js';
 import loginLogo from './login.jpg';
 
